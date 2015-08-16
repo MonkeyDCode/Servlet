@@ -43,7 +43,7 @@ public class Tarea extends HttpServlet {
             out.println("<body>");
             out.println("<div class=\"jumbotron\">");
             out.println("<div class=\"container\">");
-            out.println("<h1>Uso de las etiquetas html</a></h1>");
+            out.println("<h1>Use of the HTML labels</a></h1>");
             out.println("<h4><a href=\"https://github.com/MonkeyDCode/Servlet\">see the code here</a></a></h4>");
             out.println("<br>");
             out.println("<p class=\"lead\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. "
@@ -58,7 +58,7 @@ public class Tarea extends HttpServlet {
             
             out.println("<div class=\"container\">");
             out.println("<div class=\"row\">");
-            out.println("<div class=\"col-md-4\">");
+            out.println("<div class=\"col-md-6\">");
             out.println("<h2>Level 2 heading</h2>");
             out.println("<h3>Level 3 heading</h3>");
             out.println("<h4>Level 4 heading</h4>");
@@ -68,7 +68,7 @@ public class Tarea extends HttpServlet {
             out.println("</div>");
             
            
-            out.println("<div class=\"col-md-4\">");
+            out.println("<div class=\"col-md-6\">");
             out.println("<ul class=\"list-group\">");
             out.println("<li class=\"list-group-item\"><span class=\"glyphicon glyphicon-pencil\"></span>  Item 1</li>");
             out.println("<li class=\"list-group-item\"><span class=\"glyphicon glyphicon-pencil\"></span>  Item 2</li>");
@@ -79,7 +79,7 @@ public class Tarea extends HttpServlet {
             out.println("</div>");
             
             
-            out.println("<div class=\"col-md-4\">");
+            out.println("<div class=\"col-md-12\">");
             out.println("<table class=\"table\">");
             out.println("<tr>");
             out.println("<th>Head 1</th>");
@@ -107,7 +107,7 @@ public class Tarea extends HttpServlet {
             
             out.println("<hr>");
             out.println("<footer>");
-            out.println("<p> &copy; MonkeyDeeCode 2015</p>");
+            out.println("<p><a href=\"https://www.facebook.com/Hackberto\"> &copy; MonkeyDeeCode 2015</a></p>");
             out.println("</footer>");
             
             out.println("</div>");
