@@ -59,6 +59,7 @@ public class Tarea extends HttpServlet {
             out.println("<div class=\"container\">");
             out.println("<div class=\"row\">");
             out.println("<div class=\"col-md-6\">");
+            out.println("<h1>Heading</a></h1>");
             out.println("<h2>Level 2 heading</h2>");
             out.println("<h3>Level 3 heading</h3>");
             out.println("<h4>Level 4 heading</h4>");
@@ -70,6 +71,7 @@ public class Tarea extends HttpServlet {
            
             out.println("<div class=\"col-md-6\">");
             out.println("<ul class=\"list-group\">");
+            out.println("<h1>List</a></h1>");
             out.println("<li class=\"list-group-item\"><span class=\"glyphicon glyphicon-pencil\"></span>  Item 1</li>");
             out.println("<li class=\"list-group-item\"><span class=\"glyphicon glyphicon-pencil\"></span>  Item 2</li>");
             out.println("<li class=\"list-group-item\"><span class=\"glyphicon glyphicon-pencil\"></span>  Item 3</li>");
@@ -81,6 +83,7 @@ public class Tarea extends HttpServlet {
             
             out.println("<div class=\"col-md-12\">");
             out.println("<table class=\"table\">");
+            out.println("<h1>Table</a></h1>");
             out.println("<tr>");
             out.println("<th>Head 1</th>");
             out.println("<th>Head 2</th>");
