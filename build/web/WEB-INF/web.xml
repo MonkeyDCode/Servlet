@@ -8,6 +8,30 @@
         <servlet-name>Tarea</servlet-name>
         <servlet-class>mx.uaemex.fi.diseno.agosto.Tarea</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Goya</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Goya</servlet-class>
+        <init-param>
+            <param-name>porra1</param-name>
+            <param-value>goya</param-value>
+        </init-param>
+        <init-param>
+            <param-name>porra2</param-name>
+            <param-value>cachun</param-value>
+        </init-param>
+        <init-param>
+            <param-name>porra3</param-name>
+            <param-value>rra</param-value>
+        </init-param>
+        <init-param>
+            <param-name>repeticiones</param-name>
+            <param-value>2</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Random</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Random2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Hola</servlet-name>
         <url-pattern>/Hola</url-pattern>
@@ -15,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>Tarea</servlet-name>
         <url-pattern>/Tarea</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Goya</servlet-name>
+        <url-pattern>/Goya</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Random</servlet-name>
+        <url-pattern>/Random</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

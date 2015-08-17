@@ -18,6 +18,8 @@
             <div class="jumbotron">
                 <h1>Hello World!</h1>
                 <h4><a href="./Tarea">click here for see the homework</a></h4>
+                <h4><a href="./Goya">click here for see the Goya</a></h4>
+                <h4><a href="./Random">click here for see the work in class</a></h4>
             </div>
         </div>
     </body>
