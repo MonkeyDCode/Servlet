@@ -20,6 +20,9 @@
                 <h4><a href="./Tarea">click here for see the homework</a></h4>
                 <h4><a href="./Goya">click here for see the Goya</a></h4>
                 <h4><a href="./Random">click here for see the work in class</a></h4>
+                <h4><a href="./Form">click here for see the form 1</a></h4>
+                <h4><a href="./Fiz">click here for see the fizz bazz buzz</a></h4>
+                <h4><a href="./Hamburguesas">click here for see the hamburguers</a></h4>
             </div>
         </div>
     </body>

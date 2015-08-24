@@ -32,6 +32,50 @@
         <servlet-name>Random</servlet-name>
         <servlet-class>mx.uaemex.fi.diseno.agosto.Random2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Form</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Form</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Form2</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Form2</servlet-class>
+        <init-param>
+            <param-name>malo1</param-name>
+            <param-value>Hitler</param-value>
+        </init-param>
+        <init-param>
+            <param-name>malo2</param-name>
+            <param-value>Osama</param-value>
+        </init-param>
+        <init-param>
+            <param-name>malo3</param-name>
+            <param-value>Atila</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Form3</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Form3</servlet-class>
+        <init-param>
+            <param-name>malo1</param-name>
+            <param-value>HITLER</param-value>
+        </init-param>
+        <init-param>
+            <param-name>malo2</param-name>
+            <param-value>ATILA</param-value>
+        </init-param>
+        <init-param>
+            <param-name>malo3</param-name>
+            <param-value>OSAMA</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Fiz</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Fiz</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Hamburguesas</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Hamburguesas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Hola</servlet-name>
         <url-pattern>/Hola</url-pattern>
@@ -47,6 +91,26 @@
     <servlet-mapping>
         <servlet-name>Random</servlet-name>
         <url-pattern>/Random</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Form</servlet-name>
+        <url-pattern>/Form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Form2</servlet-name>
+        <url-pattern>/Form2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Form3</servlet-name>
+        <url-pattern>/Form3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Fiz</servlet-name>
+        <url-pattern>/Fiz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Hamburguesas</servlet-name>
+        <url-pattern>/Hamburguesas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
