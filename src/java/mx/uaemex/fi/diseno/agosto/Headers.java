@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package mx.uaemex.fi.diseno.agosto;
 
 import java.io.IOException;
@@ -8,8 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-public class Form extends HttpServlet {
+/**
+ *
+ * @author MarioAlberto
+ */
+public class Headers extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -24,73 +32,36 @@ public class Form extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-        String nombre=request.getParameter("name");
-        if(nombre==null)
-        {
-            nombre="";
-        }
-        int bandera =0;
-        Enumeration<String> nombres = request.getHeaderNames();
- 
-                if(request.getHeader("user-agent").contains("Chrome"))   
-                {
-                    
-                    bandera =1;
-                }
-            
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
-            out.println("<html lang=\"es\">");
+            Enumeration<String> nombres = request.getHeaderNames();
+            out.println("<html>");
             out.println("<head>");
-            out.println("<title>Form</title>");
-            out.println("<meta charset=\"utf-8\">");
-            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">");
-            out.println("<meta name=\"author\" content=\"Monkey Dee\">");
+            out.println("<title>Servlet Headers</title>");            
             out.println("</head>");
             out.println("<body>");
-             out.println("<div class=\"jumbotron\">");
-            out.println("<div class=\"container\">");
-            out.println("<h1>Servlet Form at " + request.getContextPath() + "</h1>");
-            
-            if(!nombre.equals("") && bandera==1)
+            out.println("<h1>Servlet Headers at " + request.getContextPath() + "</h1>");
+            out.println("<h2>Los especiales</h2>");
+            out.println("<p><b> Tipo (metodo) de petición: </b>"+request.getMethod()+"</p>");
+            out.println("<p><b>URI: </b>"+request.getRequestURI()+"</p>");
+            out.println("<p><b>Protocolo : </b>"+request.getProtocol()+"</p>");
+            out.println("<h2>La plebe :v</h2>");
+            out.println("<table border = \"1\">");
+            out.println("<tr bgcolor = \"#AAA\">");
+            out.println("<td>Encabezado </td>");
+            out.println("<td>Valor</td>");
+            out.println("</tr>");
+            while(nombres.hasMoreElements())
             {
-                if(nombre.toLowerCase().equals("hitler")||nombre.toLowerCase().equals("osama")||nombre.toLowerCase().equals("atila"))
-                {
-                    out.write("<h3>Contigo no hablo :c</h3>");
-                }
-                else
-                {
-                    out.write("<h3>Hola "+nombre+"</h3>");
-                }
-            }
-            else
-            {
-                if(bandera ==0)
-                    out.write("No eres chrome, no hablo contigo ¬¬");
-                else
-                        out.write("<h3>Dime quien eres para saludarte</h3>");
-            }
-            
-            out.println("</div>");
-            out.println("</div>");
-            
-             out.println("<div class=\"container\">");
-            out.println("<div class=\"row\">");
-            out.println("<div class=\"col-md-6\">");
-            out.println("<form id=\"formulario\"");
-            out.println("<p>");
-            out.println("<label for=\"name\">Nombre (Obligatorio)</label>\n" +
-"                <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Juan Perez\" autofocus >");
-            out.println("</p>");
-            out.println("<input type = \"submit\" value=\"Enviar\">");
-            
-            out.println("</form>");
-            out.println("</div>");
-            out.println("</div>");
-            out.println("</div>");
-             
+                String nom = nombres.nextElement();
+                out.println("<tr>");
+                out.println("<td>"+nom+"</td>");
+                out.println("<td>"+request.getHeader(nom)+"</td>");
+                out.println("</tr>");
+            }   
+            out.println("</table>");
+            out.println("");
             out.println("</body>");
             out.println("</html>");
         } finally {
@@ -111,7 +82,6 @@ public class Form extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
     }
 
     /**

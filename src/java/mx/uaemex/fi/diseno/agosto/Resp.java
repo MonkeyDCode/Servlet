@@ -1,15 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package mx.uaemex.fi.diseno.agosto;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-public class Form extends HttpServlet {
+/**
+ *
+ * @author MarioAlberto
+ */
+public class Resp extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -24,73 +31,18 @@ public class Form extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-        String nombre=request.getParameter("name");
-        if(nombre==null)
-        {
-            nombre="";
-        }
-        int bandera =0;
-        Enumeration<String> nombres = request.getHeaderNames();
- 
-                if(request.getHeader("user-agent").contains("Chrome"))   
-                {
-                    
-                    bandera =1;
-                }
-            
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
-            out.println("<html lang=\"es\">");
+            out.println("<html>");
             out.println("<head>");
-            out.println("<title>Form</title>");
-            out.println("<meta charset=\"utf-8\">");
-            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">");
-            out.println("<meta name=\"author\" content=\"Monkey Dee\">");
+            out.println("<title>Servlet Resp</title>");            
             out.println("</head>");
             out.println("<body>");
-             out.println("<div class=\"jumbotron\">");
-            out.println("<div class=\"container\">");
-            out.println("<h1>Servlet Form at " + request.getContextPath() + "</h1>");
-            
-            if(!nombre.equals("") && bandera==1)
-            {
-                if(nombre.toLowerCase().equals("hitler")||nombre.toLowerCase().equals("osama")||nombre.toLowerCase().equals("atila"))
-                {
-                    out.write("<h3>Contigo no hablo :c</h3>");
-                }
-                else
-                {
-                    out.write("<h3>Hola "+nombre+"</h3>");
-                }
-            }
-            else
-            {
-                if(bandera ==0)
-                    out.write("No eres chrome, no hablo contigo ¬¬");
-                else
-                        out.write("<h3>Dime quien eres para saludarte</h3>");
-            }
-            
-            out.println("</div>");
-            out.println("</div>");
-            
-             out.println("<div class=\"container\">");
-            out.println("<div class=\"row\">");
-            out.println("<div class=\"col-md-6\">");
-            out.println("<form id=\"formulario\"");
-            out.println("<p>");
-            out.println("<label for=\"name\">Nombre (Obligatorio)</label>\n" +
-"                <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Juan Perez\" autofocus >");
-            out.println("</p>");
-            out.println("<input type = \"submit\" value=\"Enviar\">");
-            
-            out.println("</form>");
-            out.println("</div>");
-            out.println("</div>");
-            out.println("</div>");
-             
+            out.println("<h1>Servlet Resp at " + request.getContextPath() + "</h1>");
+            out.println("<h1>ACERTIJO</h1>");
+            out.println("<h1>¿Cual es el animal que contiene en su nombre las 5 vocales ?</h1>");
+            out.println("<a href=\"./Respondon2\"> Click aquí para ver la respuesta morro</a>");
             out.println("</body>");
             out.println("</html>");
         } finally {
@@ -111,7 +63,6 @@ public class Form extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
     }
 
     /**

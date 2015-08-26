@@ -23,6 +23,9 @@
                 <h4><a href="./Form">click here for see the form 1</a></h4>
                 <h4><a href="./Fiz">click here for see the fizz bazz buzz</a></h4>
                 <h4><a href="./Hamburguesas">click here for see the hamburguers</a></h4>
+                <h4><a href="./Headers">click here for see the Headers</a></h4>
+                 <h4><a href="./Resp">click here for see the Respondones</a></h4>
+                
             </div>
         </div>
     </body>

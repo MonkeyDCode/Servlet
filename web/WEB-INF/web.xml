@@ -76,6 +76,26 @@
         <servlet-name>Hamburguesas</servlet-name>
         <servlet-class>mx.uaemex.fi.diseno.agosto.Hamburguesas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Headers</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Headers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Respondon</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Respondon</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Respondon2</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Respondon2</servlet-class>
+        <init-param>
+            <param-name>passwd</param-name>
+            <param-value>password</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Resp</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Resp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Hola</servlet-name>
         <url-pattern>/Hola</url-pattern>
@@ -111,6 +131,22 @@
     <servlet-mapping>
         <servlet-name>Hamburguesas</servlet-name>
         <url-pattern>/Hamburguesas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Headers</servlet-name>
+        <url-pattern>/Headers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Respondon</servlet-name>
+        <url-pattern>/Respondon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Respondon2</servlet-name>
+        <url-pattern>/Respondon2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Resp</servlet-name>
+        <url-pattern>/Resp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
