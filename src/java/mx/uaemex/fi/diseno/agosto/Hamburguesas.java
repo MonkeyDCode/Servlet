@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,9 +43,21 @@ public class Hamburguesas extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        //String numA="";
+        Cookie cook[]=request.getCookies();
+        int flag=0;
+        for (Cookie ck1 : cook) {
+            if(ck1.getName().equals("Cookie"))
+                    {
+                        ran=Integer.valueOf(ck1.getValue());
+                        flag=1;
+                    }
+        }
         
+        //String numA=cook[1].getValue();
         
         String numA=request.getParameter("num");
+        //System.out.println(numA);
         int num=0;
         if(numA!=null)
         {
@@ -71,7 +84,9 @@ public class Hamburguesas extends HttpServlet {
             out.println(ran);
             if(num>ran)
             {
-                 out.println("<h3>Comi menos</h3>");
+                System.out.println(num);
+                System.out.println(ran);
+                out.println("<h3>Comi menos</h3>");
                  
             }
             else
@@ -108,9 +123,13 @@ public class Hamburguesas extends HttpServlet {
              
             out.println("</body>");
             out.println("</html>");
-        } finally {
-            out.close();
         }
+        catch(Exception e)
+        {
+            System.out.println("Fallo");
+        }
+            out.close();
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -125,6 +144,7 @@ public class Hamburguesas extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        checaCookie(request,response);
         processRequest(request, response);
     }
 
@@ -153,4 +173,25 @@ public class Hamburguesas extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    private void checaCookie(HttpServletRequest request,HttpServletResponse response) {
+        Cookie ck[]=request.getCookies();
+        int flag=0;
+        for (Cookie ck1 : ck) {
+            if(ck1.getName().equals("Cookie"))
+                    {
+                        //ran=Integer.valueOf(ck1.getValue());
+                        System.out.println("\n"+ran);
+                        flag=1;
+                    }
+        if(flag==0)
+        {
+        
+            ran=generaRandom();
+            Cookie c;  
+            c = new Cookie("Cookie",String.valueOf(ran));
+            response.addCookie(c);
+        }
+    }
+
+}
 }
