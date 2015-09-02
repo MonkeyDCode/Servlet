@@ -96,6 +96,18 @@
         <servlet-name>Resp</servlet-name>
         <servlet-class>mx.uaemex.fi.diseno.agosto.Resp</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Juez</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Juez</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Giveup</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Giveup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Resultados</servlet-name>
+        <servlet-class>mx.uaemex.fi.diseno.agosto.Resultados</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Hola</servlet-name>
         <url-pattern>/Hola</url-pattern>
@@ -147,6 +159,18 @@
     <servlet-mapping>
         <servlet-name>Resp</servlet-name>
         <url-pattern>/Resp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Juez</servlet-name>
+        <url-pattern>/Juez</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Giveup</servlet-name>
+        <url-pattern>/Giveup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Resultados</servlet-name>
+        <url-pattern>/Resultados</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

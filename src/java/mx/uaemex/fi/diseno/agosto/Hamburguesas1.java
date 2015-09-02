@@ -7,7 +7,7 @@ package mx.uaemex.fi.diseno.agosto;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
+    import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -18,11 +18,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author MarioAlberto
  */
-public class Hamburguesas extends HttpServlet {
+public class Hamburguesas1 extends HttpServlet {
     int ran;
     Random diceRoller = new Random();
 
-    public Hamburguesas() {
+    public Hamburguesas1() {
         this.ran = generaRandom();
     }
     /**
